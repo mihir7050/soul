@@ -1,0 +1,12 @@
+pipelines:
+  default:
+    - step:
+        name: Run Script
+        image: python:3.9
+        size: 2x
+        script:
+          - ls
+          - pip install telebot
+          - pip install requests
+          - chmod 777 soul
+          - python3 soul.py
